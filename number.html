@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            background: #4c5ec2;
+            color: #fff
+        }
+        .screen{
+            width: 30%;
+            height: 200px;
+            background: #394f89;
+            margin: 50px auto;
+            padding: 80px 0 0 90px;
+            font-size: large;
+        }
+        .button-div{
+            width: 30%;
+            margin: 10px auto;
+        }
+        button{
+            width: 30%;
+            height: 60px;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h3{
+            text-align: center;
+            padding: 20px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>App to add, reduce and reset numbers</h3>
+    <div class="screen"></div>
+    <div class="button-div">
+        <button class="add">click to add</button>
+        <button class="reduce">click to reduce</button>
+        <button class="reset">reset</button>
+    </div>
+   
+    
+        
+    <script>
+        var count = 0;
+
+        let x = document.querySelector('.add')
+        x.addEventListener('click', function(){
+            count++
+            let y = document.querySelector('.screen')
+            y.innerHTML = count
+            
+        })
+
+        let z = document.querySelector('.reduce')
+        z.addEventListener('click', function(){
+         count--   
+         let y = document.querySelector('.screen')
+         y.innerHTML = count
+        })
+
+        let yz = document.querySelector('.reset')
+        yz.addEventListener('click', function(){
+            count = 0
+            let y = document.querySelector('.screen')
+            y.innerHTML = count
+        })
+    </script>
+</body>
+</html>
